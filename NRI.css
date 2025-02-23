@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+h1, h2 {
+    text-align: center;
+    color: #f1ecec;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .navbar ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .navbar ul li {
+      margin: 0;
+    }
+
+    .card {
+      flex-direction: column;
+      padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .card img {
+      width: 100%; /* Full width for mobile */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 1rem;
+    }
+
+    .navbar .logo {
+      font-size: 1.2rem;
+    }
+
+    .residential-section h1 {
+      font-size: 1.5rem;
+    }
+
+    .tabs button {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+
+    .card-content h2 {
+      font-size: 1.2rem;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+    }
+
+    .enquire-btn {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #9c7a4f;
+  }
+
+  .navbar ul {
+    display: flex;
+    list-style: none;
+  }
+
+  .navbar ul li {
+    margin: 0 1rem;
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+  }
+
+.hero {
+    position: relative;
+    height: 100vh; /* Make the hero section take the full screen height */
+    background: url('family.jpg') center/cover no-repeat; /* Ensure the image covers the entire hero section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the left */
+    color: white;
+    text-align: left; /* Align text to the left */
+    padding: 0 2rem; /* Add padding for the left-aligned content */
+    /* Add dimming effect */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background-blend-mode: darken; /* Blend the overlay with the background image */
+}
+
+
+.hero h1 {
+    font-size: 2rem; /* Adjust font size if needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-left: 0; /* Ensure no extra margin to the left */
+}
+
+.breadcrumb {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.section {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.section:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.section img {
+    flex: 1;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.section-content {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+/* Adjust "Why India" section text alignment and font size */
+.section-content h2 {
+    font-size: 2rem; /* Reduced font size */
+    margin-bottom: 1rem;
+    text-align: left; /* Align to the left */
+}
+
+.section-content p {
+    font-size: 1.5rem;
+    color: #2a2a2a;
+}
+
+.section-content .highlight {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Adjust "Privileges" section text alignment and font size */
+.section:nth-child(2) .section-content h2 {
+    font-size: 2rem; /* Reduced font size */
+    text-align: left; /* Align to the left */
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-content {
+        padding: 1rem 0;
+    
+    }
+}
+
+.legacy-section, .additional-partners {
+    padding: 40px 20px; /* Add padding for space */
+    margin: 0px auto; /* Add vertical spacing */
+    max-width: 1100px; /* Center-align the content */
+}
+
+/* Added extra space below the legacy section */
+.legacy-section {
+    margin-bottom: -10px; /* Add more space below this section */
+    color: #080601;
+    font-size: 1.5rem; /* Reduced font size */
+}
+
+.legacy-section h1 {
+    color: #333;
+}
+
+.partners, .partner-grid {
+    display: grid; /* Use grid layout for equal spacing */
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 30px; /* Equal spacing between all images */
+    justify-items: center; /* Center-align images within their grid cells */
+}
+
+.partners img, .partner-grid img {
+    max-width: 200px; /* Adjust the size of the images */
+    max-height: 150px;
+    object-fit: contain; /* Ensure images fit nicely without distortion */
+    transition: transform 0.3s ease; /* Optional: Add hover effect */
+}
+
+.partners img:hover, .partner-grid img:hover {
+    transform: scale(1.1); /* Scale image slightly on hover */
+}
+
+.contact-form {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    animation: fadeInUp 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.contact-form-container {
+    background-color: #fff; /* White background */
+    width: 100%; /* Full width of the screen */
+    padding: 40px 0; /* Top and bottom spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow for visual depth */
+}
+
+.contact-form {
+    background: none; /* Remove background from the form itself */
+    max-width: 500px; /* Width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px; /* Internal spacing within the form */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: none; /* No shadow on the form itself */
+    animation: fadeInUp 1s ease-in-out; /* Keep the animation */
+}
+
+.contact-form.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #555;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
